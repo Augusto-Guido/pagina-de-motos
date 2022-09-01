@@ -1,0 +1,262 @@
+@import "utilities/variables";
+@import "utilities/listas";
+@import "utilities/extend";
+@import "utilities/mixin";
+
+/* index */
+.contenedor1{
+    background: url(../img/SP1sCZ.jpg);
+    @extend %body;
+    header {
+        @extend %header;
+    
+        h1{
+            @extend %logo;
+        }
+        h1:hover{
+            transform: scale(1.1);
+        }
+
+        nav ul{
+            @extend %menu;
+            
+            li{
+                @extend %items;
+            }
+            li:hover{
+                @extend %hitems;
+            }
+        }
+    }
+    main{
+        text-align: center;
+        grid-area: main;
+        height: 75vh;
+        h2{
+            @include titulo;
+            font-size: 9rem;
+            margin-top: 50px;
+        }
+        .parrafo{
+            font-size: 3.5rem;
+            text-align: center;
+            margin-top: 400px;
+            color: nth($colores, 2);
+            -webkit-text-stroke: 3px nth($colores, 3);
+        }
+    }
+    .consultas{
+        @extend %consulta;
+    }
+    footer{
+        @include footer;
+        p{
+            text-align: center;
+            background-color: nth($colores, 1) ;
+        }
+    }
+}
+    
+
+
+/* sobre nosotros*/
+.contenedor2{
+    @extend %body;
+    header {
+        @extend %header;
+    }
+        h1{
+            @extend %logo;
+        }
+        h1:hover{
+            transform: scale(1.1);
+        }
+
+        nav ul{
+            @extend %menu;
+            
+            li{
+                @extend %items;
+            }
+            li:hover{
+                @extend %hitems;
+            }
+        }
+    main{
+        text-align: center;
+        grid-area: main;
+        height: 75vh;
+        h2{
+            @include titulo;
+            font-size: 6rem;
+            margin-top: 20px;
+        }
+    }
+    .consultas{
+        @extend %consulta;
+    }
+    footer{
+        @include footer;
+        p{
+            text-align: center;
+            background-color: nth($colores, 1) ;
+        }
+    }
+    
+}
+
+// productos
+.contenedor3{
+    @extend %body;
+    header {
+        @extend %header;
+    }
+        h1{
+            @extend %logo;
+        }
+        h1:hover{
+            transform: scale(1.1);
+        }
+
+        nav ul{
+            @extend %menu;
+            
+            li{
+                @extend %items;
+            }
+            li:hover{
+                @extend %hitems;
+            }
+        }
+        main{
+            text-align: center;
+            grid-area: main;
+            height: 75vh;
+            h2{
+                @include titulo;
+                font-size: 6rem;
+                margin-top: 20px;
+            }
+            .producto{
+                background-color: coral;
+                display: inline-block;
+                width: 200px;
+                height: 200px; 
+                margin: 120px 120px 20px 120px; 
+                border-style: groove;
+            }
+            
+            .productoDos{
+                background-color: coral;
+                display: inline-block;
+                width: 200px;
+                height: 200px; 
+                margin:  0px 120px 20px 120px; 
+                border-style: groove;
+            }
+
+        }
+        .consultas{
+            @extend %consulta;
+        }
+        footer{
+            @include footer;
+            p{
+                text-align: center;
+                background-color: nth($colores, 1) ;
+            }
+        }
+}
+
+//contacto
+.contenedor4{
+    @extend %body;
+    header {
+        @extend %header;
+    }
+        h1{
+            @extend %logo;
+        }
+        h1:hover{
+            transform: scale(1.1);
+        }
+
+        nav ul{
+            @extend %menu;
+            
+            li{
+                @extend %items;
+            }
+            li:hover{
+                @extend %hitems;
+            }
+        }
+    main{
+        text-align: center;
+        grid-area: main;
+        height: 75vh;
+        h2{
+            @include titulo;
+            font-size: 6rem;
+            margin-top: 20px;
+        }
+        }
+    .consultas{
+        @extend %consulta;
+    }
+    footer{
+        @include footer;
+        p{
+            text-align: center;
+            background-color: nth($colores, 1) ;
+        }
+    }
+        
+      
+}
+
+// como llegar
+.contenedor5{
+    @extend %body;
+    header {
+        @extend %header;
+    }
+        h1{
+            @extend %logo;
+        }
+        h1:hover{
+            transform: scale(1.1);
+        }
+
+        nav ul{
+            @extend %menu;
+            
+            li{
+                @extend %items;
+            }
+            li:hover{
+                @extend %hitems;
+            }
+        }
+    main{
+        text-align: center;
+        grid-area: main;
+        height: 75vh;
+        h2{
+            @include titulo;
+            font-size: 6rem;
+            margin-top: 20px;
+        }
+        }
+        .consultas{
+            @extend %consulta;
+        }
+        footer{
+            @include footer;
+            p{
+                text-align: center;
+                background-color: nth($colores, 1) ;
+            }
+        }
+        
+}  

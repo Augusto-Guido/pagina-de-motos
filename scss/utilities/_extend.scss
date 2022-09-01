@@ -1,0 +1,65 @@
+//extend
+
+%body{
+background-color: nth($colores, 2);
+min-width: 100;
+min-height: 100vh;
+display: grid;
+grid-template-columns: 100%;
+grid-template-rows: 12% 87% 1%;
+grid-template-areas: 
+"header"
+"main"
+"footer"
+;
+}
+
+%logo{
+    margin-bottom: 5px;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-text-stroke: 1px nth($colores, 3); 
+    margin-top: 20px;
+    color: nth($colores, 2);
+    font-size: 3.5rem;
+}
+
+%header{
+    display: flex;
+    background-color: $color-principal;
+    flex-direction: column;
+    align-items: center;
+    grid-area: header;
+}
+
+%menu{
+    display: flex;
+    list-style: none;
+    column-gap: 5px;
+    margin-top: 30px;
+    margin-left: 10%;
+}
+
+%items{
+    padding: 1px;
+    border-style: none;
+    margin-left: 10px;
+    background-color: nth($colores, 1);
+}
+
+%hitems{
+    transform: scale(1.4);
+    border-radius: 50px;
+    background-color: nth($colores, 1);
+}
+
+%consulta{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
+
+%main{
+    text-align: center;
+    grid-area: main;
+    height: 75vh;
+}

@@ -1,0 +1,13 @@
+
+@mixin titulo{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: nth($colores, 2);
+    -webkit-text-stroke: 3px nth($colores, 3);
+}
+
+@mixin footer{
+    text-align: center;
+    grid-area: footer;
+    padding-top: 70px;
+}

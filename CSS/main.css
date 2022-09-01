@@ -1,0 +1,183 @@
+.contenedor1, .contenedor2, .contenedor3, .contenedor4, .contenedor5 {
+  background-color: white;
+  min-width: 100;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 12% 87% 1%;
+  grid-template-areas: "header" "main" "footer"; }
+
+.contenedor1 header h1, .contenedor2 h1, .contenedor3 h1, .contenedor4 h1, .contenedor5 h1 {
+  margin-bottom: 5px;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-text-stroke: 1px black;
+  margin-top: 20px;
+  color: white;
+  font-size: 3.5rem; }
+
+.contenedor1 header, .contenedor2 header, .contenedor3 header, .contenedor4 header, .contenedor5 header {
+  display: flex;
+  background-color: #e56515;
+  flex-direction: column;
+  align-items: center;
+  grid-area: header; }
+
+.contenedor1 header nav ul, .contenedor2 nav ul, .contenedor3 nav ul, .contenedor4 nav ul, .contenedor5 nav ul {
+  display: flex;
+  list-style: none;
+  column-gap: 5px;
+  margin-top: 30px;
+  margin-left: 10%; }
+
+.contenedor1 header nav ul li, .contenedor2 nav ul li, .contenedor3 nav ul li, .contenedor4 nav ul li, .contenedor5 nav ul li {
+  padding: 1px;
+  border-style: none;
+  margin-left: 10px;
+  background-color: #e56515; }
+
+.contenedor1 header nav ul li:hover, .contenedor2 nav ul li:hover, .contenedor3 nav ul li:hover, .contenedor4 nav ul li:hover, .contenedor5 nav ul li:hover {
+  transform: scale(1.4);
+  border-radius: 50px;
+  background-color: #e56515; }
+
+.contenedor1 .consultas, .contenedor2 .consultas, .contenedor3 .consultas, .contenedor4 .consultas, .contenedor5 .consultas {
+  position: fixed;
+  bottom: 0px;
+  right: 0px; }
+
+/* index */
+.contenedor1 {
+  background: url(../img/SP1sCZ.jpg); }
+  .contenedor1 header h1:hover {
+    transform: scale(1.1); }
+  .contenedor1 main {
+    text-align: center;
+    grid-area: main;
+    height: 75vh; }
+    .contenedor1 main h2 {
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+      color: white;
+      -webkit-text-stroke: 3px black;
+      font-size: 9rem;
+      margin-top: 50px; }
+    .contenedor1 main .parrafo {
+      font-size: 3.5rem;
+      text-align: center;
+      margin-top: 400px;
+      color: white;
+      -webkit-text-stroke: 3px black; }
+  .contenedor1 footer {
+    text-align: center;
+    grid-area: footer;
+    padding-top: 70px; }
+    .contenedor1 footer p {
+      text-align: center;
+      background-color: #e56515; }
+
+/* sobre nosotros*/
+.contenedor2 h1:hover {
+  transform: scale(1.1); }
+
+.contenedor2 main {
+  text-align: center;
+  grid-area: main;
+  height: 75vh; }
+  .contenedor2 main h2 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke: 3px black;
+    font-size: 6rem;
+    margin-top: 20px; }
+
+.contenedor2 footer {
+  text-align: center;
+  grid-area: footer;
+  padding-top: 70px; }
+  .contenedor2 footer p {
+    text-align: center;
+    background-color: #e56515; }
+
+.contenedor3 h1:hover {
+  transform: scale(1.1); }
+
+.contenedor3 main {
+  text-align: center;
+  grid-area: main;
+  height: 75vh; }
+  .contenedor3 main h2 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke: 3px black;
+    font-size: 6rem;
+    margin-top: 20px; }
+  .contenedor3 main .producto {
+    background-color: coral;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 120px 120px 20px 120px;
+    border-style: groove; }
+  .contenedor3 main .productoDos {
+    background-color: coral;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin: 0px 120px 20px 120px;
+    border-style: groove; }
+
+.contenedor3 footer {
+  text-align: center;
+  grid-area: footer;
+  padding-top: 70px; }
+  .contenedor3 footer p {
+    text-align: center;
+    background-color: #e56515; }
+
+.contenedor4 h1:hover {
+  transform: scale(1.1); }
+
+.contenedor4 main {
+  text-align: center;
+  grid-area: main;
+  height: 75vh; }
+  .contenedor4 main h2 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke: 3px black;
+    font-size: 6rem;
+    margin-top: 20px; }
+
+.contenedor4 footer {
+  text-align: center;
+  grid-area: footer;
+  padding-top: 70px; }
+  .contenedor4 footer p {
+    text-align: center;
+    background-color: #e56515; }
+
+.contenedor5 h1:hover {
+  transform: scale(1.1); }
+
+.contenedor5 main {
+  text-align: center;
+  grid-area: main;
+  height: 75vh; }
+  .contenedor5 main h2 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke: 3px black;
+    font-size: 6rem;
+    margin-top: 20px; }
+
+.contenedor5 footer {
+  text-align: center;
+  grid-area: footer;
+  padding-top: 70px; }
+  .contenedor5 footer p {
+    text-align: center;
+    background-color: #e56515; }
