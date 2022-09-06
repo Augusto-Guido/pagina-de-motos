@@ -6,12 +6,35 @@
 /* index */
 .contenedor1{
     background: url(../img/SP1sCZ.jpg);
+    @media screen and (min-width: 868px) and (max-width: 1270px){
+        background: url(../img/ktm.jpg);
+        background-size: 100% 100%;
+        background-attachment: fixed;
+    }
+    @media screen and (max-width: 868px){
+        background: url(../img/ktm2.jpg);
+        background-size: 100% 100%;
+        background-attachment: fixed;
+    }
+    @media screen and (max-width: 600px){
+        background: url(../img/ktm3.jpg);
+        background-size: 100% 100%;
+        background-attachment: fixed;
+    }
+
     @extend %body;
     header {
         @extend %header;
     
         h1{
             @extend %logo;
+            @media screen and (max-width: 868px){
+                font-size: 2.5rem;
+                -webkit-text-stroke: 0.9px nth($colores, 3); 
+            }
+            @media screen and (max-width: 400px){
+                font-size: 2.3rem;
+            }
         }
         h1:hover{
             transform: scale(1.1);
@@ -36,13 +59,29 @@
             @include titulo;
             font-size: 9rem;
             margin-top: 50px;
+            @media screen and (max-width:600px){
+                font-size: 4rem;
+                -webkit-text-stroke: 1px nth($colores, 3);
+            }
+            @media screen and (min-width: 600px) and (max-width: 1024px){
+                font-size: 6rem;
+                -webkit-text-stroke: 2px nth($colores, 3);
+            }
         }
         .parrafo{
             font-size: 3.5rem;
             text-align: center;
             margin-top: 400px;
             color: nth($colores, 2);
-            -webkit-text-stroke: 3px nth($colores, 3);
+            -webkit-text-stroke: 1px nth($colores, 3);
+            @media screen and (min-width: 600px) and (max-width: 1024px){
+                font-size: 3rem;
+                -webkit-text-stroke: 1px nth($colores, 3);
+            }
+            @media screen and (max-width: 600px){
+                font-size: 2.6rem;
+                -webkit-text-stroke: 1px nth($colores, 3)
+            }
         }
     }
     .consultas{
@@ -67,6 +106,13 @@
     }
         h1{
             @extend %logo;
+            @media screen and (max-width: 868px){
+                font-size: 2.5rem;
+            }
+            @media screen and (max-width: 400px){
+                font-size: 2.3rem;
+                -webkit-text-stroke: 0.4px nth($colores, 3); 
+            }
         }
         h1:hover{
             transform: scale(1.1);
@@ -90,6 +136,14 @@
             @include titulo;
             font-size: 6rem;
             margin-top: 20px;
+            @media screen and (max-width:600px){
+                font-size: 3rem;
+                -webkit-text-stroke: 1.5px nth($colores, 3)
+            }
+            @media screen and (min-width: 600px) and (max-width: 1024px){
+                font-size: 5rem;
+                -webkit-text-stroke: 2px nth($colores, 3)
+            }
         }
     }
     .consultas{
@@ -108,11 +162,26 @@
 // productos
 .contenedor3{
     @extend %body;
+    @media screen and (max-width: 579px){
+        grid-template-rows: 5% 94% 1%;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer"
+        ;
+    }
     header {
         @extend %header;
     }
         h1{
             @extend %logo;
+            @media screen and (max-width: 868px){
+                font-size: 2.5rem;
+                -webkit-text-stroke: 0.9px nth($colores, 3); 
+            }
+            @media screen and (max-width: 400px){
+                font-size: 2.3rem;
+            }
         }
         h1:hover{
             transform: scale(1.1);
@@ -136,23 +205,14 @@
                 @include titulo;
                 font-size: 6rem;
                 margin-top: 20px;
-            }
-            .producto{
-                background-color: coral;
-                display: inline-block;
-                width: 200px;
-                height: 200px; 
-                margin: 120px 120px 20px 120px; 
-                border-style: groove;
-            }
-            
-            .productoDos{
-                background-color: coral;
-                display: inline-block;
-                width: 200px;
-                height: 200px; 
-                margin:  0px 120px 20px 120px; 
-                border-style: groove;
+                @media screen and (max-width:600px){
+                    font-size: 3rem;
+                    -webkit-text-stroke: 1.5px nth($colores, 3);
+                }
+                @media screen and (min-width: 600px) and (max-width: 1024px){
+                    font-size: 5rem;
+                    -webkit-text-stroke: 2px nth($colores, 3)
+                }
             }
 
         }
@@ -160,7 +220,15 @@
             @extend %consulta;
         }
         footer{
-            @include footer;
+            text-align: center;
+            padding-top: 200px;
+            grid-area: footer;
+            @media screen and (min-width:578px) and (max-width:768px){
+                padding-top: 320px;
+            }
+            @media screen and (max-width:578px){
+                padding-top: 1400px;
+            }
             p{
                 text-align: center;
                 background-color: nth($colores, 1) ;
@@ -176,6 +244,14 @@
     }
         h1{
             @extend %logo;
+            @media screen and (max-width: 868px){
+                font-size: 2.5rem;
+                -webkit-text-stroke: 0.9px nth($colores, 3); 
+            }
+            @media screen and (max-width: 400px){
+                font-size: 2.3rem;
+                 
+            }
         }
         h1:hover{
             transform: scale(1.1);
@@ -199,6 +275,14 @@
             @include titulo;
             font-size: 6rem;
             margin-top: 20px;
+            @media screen and (max-width:600px){
+                font-size: 3rem;
+                -webkit-text-stroke: 1.5px nth($colores, 3)
+            }
+            @media screen and (min-width: 600px) and (max-width: 1024px){
+                font-size: 5rem;
+          
+            }
         }
         }
     .consultas{
@@ -223,6 +307,14 @@
     }
         h1{
             @extend %logo;
+            @media screen and (max-width: 868px){
+                font-size: 2.5rem;
+                -webkit-text-stroke: 0.9px nth($colores, 3); 
+            }
+            @media screen and (max-width: 400px){
+                font-size: 2.3rem;
+                -webkit-text-stroke: 0.9px nth($colores, 3); 
+            }
         }
         h1:hover{
             transform: scale(1.1);
@@ -242,10 +334,18 @@
         text-align: center;
         grid-area: main;
         height: 75vh;
+        .maps{
+            margin-top: 20px;
+        }
         h2{
             @include titulo;
             font-size: 6rem;
             margin-top: 20px;
+            @media screen and (max-width: 767px){
+                font-size: 2.5rem;
+                -webkit-text-stroke: 1px nth($colores, 3);
+            }
+
         }
         }
         .consultas{
@@ -256,6 +356,9 @@
             p{
                 text-align: center;
                 background-color: nth($colores, 1) ;
+            }
+            @media screen and (min-width: 481px) and (max-width:768px) {
+                padding-top: 200px;
             }
         }
         
