@@ -59,33 +59,84 @@
             @include titulo;
             font-size: 9rem;
             margin-top: 50px;
-            @media screen and (max-width:600px){
-                font-size: 4rem;
-                -webkit-text-stroke: 1px nth($colores, 3);
-            }
-            @media screen and (min-width: 600px) and (max-width: 1024px){
+            @media screen and (min-width: 680px) and (max-width: 1024px){
                 font-size: 6rem;
                 -webkit-text-stroke: 2px nth($colores, 3);
             }
+            @media screen and (max-width: 679px){
+                font-size: 3rem;
+                -webkit-text-stroke: 1px nth($colores, 3);
+            }
+
         }
+
         .parrafo{
             font-size: 3.5rem;
             text-align: center;
             margin-top: 400px;
             color: nth($colores, 2);
             -webkit-text-stroke: 1px nth($colores, 3);
-            @media screen and (min-width: 600px) and (max-width: 1024px){
-                font-size: 3rem;
-                -webkit-text-stroke: 1px nth($colores, 3);
+            @media screen and (min-width: 1023px) and (max-width: 1300px){
+                margin-top: 320px;
             }
-            @media screen and (max-width: 600px){
+            @media screen and (min-width: 801px) and (max-width: 1300px){
                 font-size: 2.6rem;
-                -webkit-text-stroke: 1px nth($colores, 3)
+            }
+            @media screen and (min-width: 680px) and (max-width: 800px){
+                font-size: 2.6rem;
+                -webkit-text-stroke: 1px nth($colores, 3);
+                margin-top: 320px;
+            }
+            @media screen and (min-width: 680px) and (max-width: 800px){
+                font-size: 2.6rem;
+                -webkit-text-stroke: 1px nth($colores, 3);
+                margin-top: 320px;
+            }
+
+            @media screen and (max-width: 679px){
+                font-size: 1.8rem;
+                -webkit-text-stroke: 0.5px nth($colores, 3);
+                margin-top: 400px;
+            }
+            @media screen and (max-width: 300px){
+                font-size: 1.5rem;
+            }
+        }
+        .social{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            div{
+                .insta{
+                    @media screen and (max-width: 840px){
+                       max-width: 50px;
+                    }
+                    @media screen and (max-width: 400px){
+                        max-width: 32px;
+                     }
+                    
+                }
+                .facebook{
+                    @media screen and (max-width: 840px){
+                       max-width: 50px;
+                    }
+                    @media screen and (max-width: 400px){
+                        max-width: 32px;
+                     }
+                }
             }
         }
     }
     .consultas{
         @extend %consulta;
+        .wpp{
+            @media screen and (max-width: 990px){
+                max-width: 50px;
+             }
+            @media screen and (max-width: 400px){
+                max-width: 32px;
+             }
+        }
     }
     footer{
         @include footer;
@@ -144,10 +195,28 @@
                 font-size: 5rem;
                 -webkit-text-stroke: 2px nth($colores, 3)
             }
+
+        }
+        .grupo{
+            max-width: 700px;
+            border-color: nth($colores, 1);
+            border-width: 3px;
+            border-style: solid;
+            @media screen and (max-width:727px){
+                max-width: 100%;
+            }
         }
     }
     .consultas{
         @extend %consulta;
+        .wpp{
+            @media screen and (max-width: 990px){
+                max-width: 50px;
+             }
+            @media screen and (max-width: 400px){
+                max-width: 32px;
+             }
+        }
     }
     footer{
         @include footer;
@@ -214,20 +283,38 @@
                     -webkit-text-stroke: 2px nth($colores, 3)
                 }
             }
+            .card-tittle{
+                font-size: 1rem;
+
+            }
 
         }
         .consultas{
             @extend %consulta;
+            .wpp{
+                @media screen and (max-width: 990px){
+                    max-width: 50px;
+                 }
+                @media screen and (max-width: 400px){
+                    max-width: 32px;
+                 }
+            }
         }
         footer{
             text-align: center;
             padding-top: 200px;
             grid-area: footer;
+            @media screen and (min-width:769px) and (max-width:1200px){
+                padding-top: 230px;
+            }
             @media screen and (min-width:578px) and (max-width:768px){
                 padding-top: 320px;
             }
-            @media screen and (max-width:578px){
+            @media screen and (min-width:540px) and (max-width:577px){
                 padding-top: 1400px;
+            }
+            @media screen and (max-width:539px){
+                padding-top: 1200px;
             }
             p{
                 text-align: center;
@@ -284,9 +371,49 @@
           
             }
         }
+        form{
+            width: 450px;
+            margin: auto;
+            background-color: nth($colores, 1);
+            padding: 10px 20px;
+            box-sizing: border-box;
+            margin-top: 20px;
+            border-radius: 7px;
+            @media (max-width:480px){
+                width: 100%;
+            }
         }
+        input, textarea{
+            width: 100%;
+            margin-bottom: 20px;
+            padding: 7px;
+            font-size: 17px;
+            border: none;
+        }
+        textarea{
+            min-height: 100px;
+            max-height: 200px;
+        }
+        #boton{
+            background-color: #31384a;
+            color: #fff;
+            padding: 15px;
+        }
+        #boton:hover{
+            cursor: pointer;
+        }
+        
+    }
     .consultas{
         @extend %consulta;
+        .wpp{
+            @media screen and (max-width: 990px){
+                max-width: 50px;
+             }
+            @media screen and (max-width: 400px){
+                max-width: 32px;
+             }
+        }
     }
     footer{
         @include footer;
@@ -334,8 +461,18 @@
         text-align: center;
         grid-area: main;
         height: 75vh;
+        .googlemap{
+            @media screen and (max-width: 1100px){
+                width: 250px;
+                height: 400px;
+             }
+            @media screen and (max-width: 400px){
+                width: 150px;
+                height: 300px;
+             }
+        }
         .maps{
-            margin-top: 20px;
+            margin-top: 40px;
         }
         h2{
             @include titulo;
@@ -350,6 +487,14 @@
         }
         .consultas{
             @extend %consulta;
+            .wpp{
+                @media screen and (max-width: 990px){
+                    max-width: 50px;
+                 }
+                @media screen and (max-width: 400px){
+                    max-width: 32px;
+                 }
+            }
         }
         footer{
             @include footer;
