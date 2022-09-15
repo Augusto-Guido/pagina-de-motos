@@ -252,10 +252,6 @@
     margin-top: 40px; }
   .contenedor3 main .card-tittle {
     font-size: 1rem; }
-    @media screen and (max-width: 600px) {
-      .contenedor3 main .card-tittle {
-        font-size: 3rem;
-        -webkit-text-stroke: 1.5px black; } }
 
 @media screen and (max-width: 990px) {
   .contenedor3 .consultas .wpp {
